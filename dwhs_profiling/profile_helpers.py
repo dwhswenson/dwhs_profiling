@@ -5,7 +5,7 @@ import pandas as pd
 class StatManager(object):
     
     property_functions = {
-        None : (lambda x : None, None)
+        None : (lambda x : None, None),
         'ncalls' : (lambda x : x[1], 0)    
     }
     
