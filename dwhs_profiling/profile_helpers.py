@@ -6,7 +6,11 @@ class StatManager(object):
     
     property_functions = {
         None : (lambda x : None, None),
-        'ncalls' : (lambda x : x[1], 0)    
+        'ncalls' : (lambda x : x[1], 0),  
+        'tottime' : (lambda x : x[2], 0),
+        'cumtime' : (lambda x : x[3], 0),
+        'time_per_call' : (lambda x : x[2] / x[1], 0),
+        'cumtime_per_call' : (lambda x : x[3] / x[1], 0)
     }
     
     def __init__(self, function_dictionary):
